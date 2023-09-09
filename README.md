@@ -1,27 +1,6 @@
 # Manage and Create TTRPG content
 Obsidian templates for managing a table top rpg game and generating content using GPT.
 
-## Installation
-The "Example Vault" contains TTRPG folder with the prepared management system you can simply drop into your vault and start using. The Templates folder contains simple templates you can place into the folder where you store your other templates and the Text_Generator contains templates specific to the [Text Generator plugin](https://text-gen.com). If you want to use these, you need to download the plugin and specify path in the setting to this folder. 
-
-### **Warning:** 
-Due to Dataview not working well with canvas files you cannot SIMPLY rename the campaign. The name is spelled out in every single dataview query on the canvas so you will need to change it. Example:
-Current link to the canvas is `[[Campaign.canvas|Campaign]]` and a dataview query for the adventures looks like this:
-```
-table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox"
-and [[Campaign.canvas|Campaign]]
-where contains(type, "adventure") and !completed sort file.name
-```
-So if you rename your campaign to "The Mighty Nein" (by changing the name of the canvas files) all the other links in the vault such as those in Templates are updated, but those in the dataview queries inside the canvas are NOT. So you need to go through all of them and change `[[Campaign.canvas|Campagin]]` to `[[The Mighty Nein.canvas|The Mighty Nein]]`. So the new query will look like this:
-```
-table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox"
-and [[The Mighty Nein.canvas|The Mighty Nein]]
-where contains(type, "adventure") and !completed sort file.name
-```
-If you find a workaround, please let me know. 
-
-
-
 ## Part 1: Managing a TTRPG campaign in Obsidian
 
 This is how I used to manage my game notes and prep:
@@ -128,3 +107,23 @@ I have quite a few of these templates and they are available in this repo, yet s
 There you go, this is how I generate fleshed out content very quickly offloading all the annoying busy work and focusing on the grand story and tiny details, the things that I enjoy the most. It has allowed me to run adventures that I wouldn't have dared to run otherwise due to fear of their scale and thanks to the management system I feel on top of things even though there is drastically more text than I had with my old system. Thanks to how fast [[GPT]] is I can even generate stuff on the fly during the session.
 
 I hope you enjoyed this rundown, hit the star if you did to show your appreciation. I will keep updating the templates and would love to see your own or how you modify them to fit your needs. Have fun gaming!
+
+## Installation
+The "Example Vault" contains TTRPG folder with the prepared management system you can simply drop into your vault and start using. The Templates folder contains simple templates you can place into the folder where you store your other templates and the Text_Generator contains templates specific to the [Text Generator plugin](https://text-gen.com). If you want to use these, you need to download the plugin and specify path in the setting to this folder. 
+
+### **Warning:** 
+Due to Dataview not working well with canvas files you cannot SIMPLY rename the campaign. The name is spelled out in every single dataview query on the canvas so you will need to change it. Example:
+Current link to the canvas is `[[Campaign.canvas|Campaign]]` and a dataview query for the adventures looks like this:
+```
+table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox"
+and [[Campaign.canvas|Campaign]]
+where contains(type, "adventure") and !completed sort file.name
+```
+So if you rename your campaign to "The Mighty Nein" (by changing the name of the canvas files) all the other links in the vault such as those in Templates are updated, but those in the dataview queries inside the canvas are NOT. So you need to go through all of them and change `[[Campaign.canvas|Campagin]]` to `[[The Mighty Nein.canvas|The Mighty Nein]]`. So the new query will look like this:
+```
+table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox"
+and [[The Mighty Nein.canvas|The Mighty Nein]]
+where contains(type, "adventure") and !completed sort file.name
+```
+If you find a workaround, please let me know. 
+
