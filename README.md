@@ -20,6 +20,8 @@ where contains(type, "adventure") and !completed sort file.name
 ```
 If you find a workaround, please let me know. 
 
+
+
 ## Part 1: Managing a TTRPG campaign in Obsidian
 
 This is how I used to manage my game notes and prep:
