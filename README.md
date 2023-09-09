@@ -8,10 +8,17 @@ The "Example Vault" contains TTRPG folder with the prepared management system yo
 Due to Dataview not working well with canvas files you cannot SIMPLY rename the campaign. The name is spelled out in every single dataview query on the canvas so you will need to change it. Example:
 Current link to the canvas is `[[Campaign.canvas|Campaign]]` and a dataview query for the adventures looks like this:
 ```
-table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox" and [[Campaign.canvas|Campaign]]
+table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox"
+and [[Campaign.canvas|Campaign]]
 where contains(type, "adventure") and !completed sort file.name
 ```
-So if you rename your campaign to "The Mighty Nein" (by changing the name of the canvas files) all the other links in the vault such as those in Templates are updated, but those in the dataview queries inside the canvas are NOT. So you need to go through all of them and change `[[Campaign.canvas|Campagin]]` to `[[The Mighty Nein.canvas|The Mighty Nein]]`. If you find a workaround, please let me know. 
+So if you rename your campaign to "The Mighty Nein" (by changing the name of the canvas files) all the other links in the vault such as those in Templates are updated, but those in the dataview queries inside the canvas are NOT. So you need to go through all of them and change `[[Campaign.canvas|Campagin]]` to `[[The Mighty Nein.canvas|The Mighty Nein]]`. So the new query will look like this:
+```
+table without id file.link as "Name", description as "Description" From "TTRPG" or "Inbox"
+and [[The Mighty Nein.canvas|The Mighty Nein]]
+where contains(type, "adventure") and !completed sort file.name
+```
+If you find a workaround, please let me know. 
 
 ## Part 1: Managing a TTRPG campaign in Obsidian
 
