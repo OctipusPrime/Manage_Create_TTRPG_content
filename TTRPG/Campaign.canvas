@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"type":"text","text":"# Name of the Campaign\n\nMaybe a short description of what it is about and little reminders that you want to have in front of you at all times.\n","id":"d3c6ca589ff71fea","x":162,"y":-323,"width":556,"height":303},
+		{"type":"text","text":"## Incubator\n\nIdeas that are looking for the right place and time\n","id":"da72bceadb42053f","x":-685,"y":920,"width":825,"height":1320},
+		{"type":"text","text":"## Follow up on\n- [ ] Things came up during previous sessions and you want to came back to ","id":"40dab5e2956ba760","x":-685,"y":493,"width":825,"height":382},
+		{"type":"text","text":"## Unresolved scenes\n```dataview\ntable rows.file.link as \"Scene\", rows.file.frontmatter.description as \"Description\" from \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]] where type = \"scene\" and !completed group by adventure sort file.mtime desc \n```\n","id":"6a061ad4a17e0965","x":-685,"y":66,"width":825,"height":412},
+		{"id":"18d14a28777e4373","type":"file","file":"TTRPG/Opening.md","x":162,"y":27,"width":556,"height":493},
+		{"id":"088dec72ffb94818","type":"file","file":"TTRPG/Coming up.md","x":162,"y":560,"width":556,"height":560},
+		{"id":"e7e86d2d1eea51a0","type":"file","file":"TTRPG/Secrets a clues.md","x":162,"y":1149,"width":556,"height":471},
+		{"id":"ad025f94888a598a","type":"file","file":"TTRPG/Backlog.md","x":162,"y":1660,"width":556,"height":580},
+		{"type":"text","text":"## NPCs\n```dataview\ntable without id file.link as \"Name\", description as \"Description\" From \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"NPC\") and !completed sort file.mday desc\n```\n\n## Locations\n```dataview\ntable without id file.link as \"Name\", description as \"Description\" From \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"location\") and !completed\n```\n\n## Factions\n```dataview\ntable without id file.link as \"Name\", description as \"Description\" From \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"faction\") and !completed sort file.mday desc\n```\n\n## Monsters\n```dataview\ntable without id file.link as \"Name\", description as \"Description\" From \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"monster\") and !completed\n```\n\n## Items\n```dataview\ntable without id file.link as \"Name\", description as \"Description\" From \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"item\") and !completed\n```","id":"7c9115d67ee175a0","x":747,"y":58,"width":680,"height":2182},
+		{"type":"text","text":"## Player characters\n```dataview\ntable description as \"Description\" from \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"PC\") and !contains(type, \"NPC\")\n```\n\n","id":"48eccb894428b3f2","x":747,"y":-323,"width":680,"height":350},
+		{"type":"text","text":"## Active adventures\n```dataview\ntable without id file.link as \"Name\", description as \"Description\" From \"TTRPG\" or \"Inbox\" and [[Campaign.canvas|Campaign]]\nwhere contains(type, \"adventure\") and !completed sort file.name\n```\n","id":"870be4ecb1c04e12","x":-685,"y":-323,"width":825,"height":350}
+	],
+	"edges":[]
+}

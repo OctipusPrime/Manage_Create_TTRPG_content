@@ -1,0 +1,1 @@
+- [ ] List of hidden info that you can put wherever the players look
